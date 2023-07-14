@@ -1,0 +1,164 @@
+package com.company;
+import java.util.Scanner;
+import java.util.Random;
+
+// Question 1 - Find if a student is pass or fail
+// criteria - student should score more tha 33 in all subjects(3)
+// and avg should be 40 or above
+
+public class practiceset3 {
+    public static void main(String[] args) {
+
+
+        byte m1, m2, m3;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your marks in physics:");
+        m1 = sc.nextByte();
+
+        System.out.println("Enter your marks in maths:");
+        m2 = sc.nextByte();
+
+        System.out.println("Enter your marks in chemistry:");
+        m3 = sc.nextByte();
+
+        float avg = (m1 + m2 + m3) / 3.0f;
+        System.out.println("your percentage:" + avg);
+        if (avg >= 40 && m1 >= 33 && m2 >= 33 && m3 >= 33) {
+            System.out.println("pass");
+        } else {
+            System.out.println("fail");
+        }
+
+
+        // Question 2: Income tax calculater
+
+
+        Scanner fc = new Scanner(System.in);
+        System.out.println("Enter your income:");
+        float tax = 0;
+        float income = fc.nextFloat();
+        if (income <= 2.5) {
+            tax = tax + 0;
+        } else if (income > 2.5f && income <= 5.0f) {
+            tax = tax + 0.05f * (income - 2.5f);
+        } else if (income > 5f && income <= 10.0f) {
+            tax = tax + 0.05f * (5.0f - 2.5f);
+            tax = tax + 0.20f * (income - 5.0f);
+        } else if (income > 10.0f) {
+            tax = tax + 0.05f * (5.0f - 2.5f);
+            tax = tax + 0.20f * (10.0f - 5.0f);
+            tax = tax + 0.30f * (income - 10.0f);
+        }
+
+        System.out.println("Total tax:" + tax);
+
+        // Question 3: Week day generator
+
+        Scanner tc = new Scanner(System.in);
+        int day = tc.nextInt();
+        switch (day) {
+            case 1 -> System.out.println("MONDAY");
+            case 2 -> System.out.println("TUESDAY");
+            case 3 -> System.out.println("WEDNESDAY");
+            case 4 -> System.out.println("THURSDAY");
+            case 5 -> System.out.println("FRIDAY");
+            case 6 -> System.out.println("SATURDAY");
+            case 7 -> System.out.println("SUNDAY");
+
+        }
+
+        // QUESTION 4: Find if leap year is divisible by 4
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter an Year to check if it is a leap year or not : ");
+        int year = scan.nextInt();
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+            System.out.println(year + " is a leap year");
+        else
+            System.out.println(year + " is not a leap year");
+
+        // QUESTION 5: Website type finder
+
+        Scanner pm = new Scanner(System.in);
+        String website = pm.next();
+        if (website.endsWith(".org")) {
+            System.out.println("ORAGANIZATION WEBSITE");
+        }
+
+            else if (website.endsWith(".com")) {
+            System.out.println("COMMERCIAL WEBSITE");
+        }
+
+                else if (website.endsWith(".in")) {
+                    System.out.println("INDIAN WEBSITE");
+                }
+
+
+
+
+
+
+                // ROCK, PAPER AND SCISSOR GAME
+
+
+        // User Choice
+
+        System.out.println("Choose any one of them");
+        System.out.println("1 --> Rock");
+        System.out.println("2 --> Paper");
+        System.out.println("3 --> Scissor");
+        Scanner cs = new Scanner(System.in);
+        int user_choice=cs.nextInt();
+        if(user_choice == 1){
+            System.out.println("You choose Rock!");
+        }
+        else if(user_choice == 2){
+            System.out.println("You choose Paper!");
+        }
+        else if(user_choice == 3){
+            System.out.println("You choose Scissor!");
+        }
+
+        // Computer Choice
+
+        Random r = new Random();
+        int computer_choice = r.nextInt(1, 4);
+        //  System.out.println(computer_choice);
+        if(computer_choice == 1){
+            System.out.println("Computer choose Rock!");
+        }
+        else if(computer_choice == 2){
+            System.out.println("Computer choose Paper!");
+        }
+        else if(computer_choice == 3){
+            System.out.println("Computer choose Scissor!");
+        }
+
+        // Comparison
+
+        if(computer_choice == user_choice){
+            System.out.println("Its a TIE");
+        }
+        else if(computer_choice == 1 && user_choice == 2){
+            System.out.println("Its Paper, You WON!");
+        }
+        else if(computer_choice == 1 && user_choice == 3){
+            System.out.println("Its Rock, You LOSE!");
+        }
+        else if(computer_choice == 2 && user_choice == 1){
+            System.out.println("Its Paper, You LOSE!");
+        }
+        else if(computer_choice == 2 && user_choice == 3){
+            System.out.println("Its Scissor, You WON!");
+        }
+        else if(computer_choice == 3 && user_choice == 1){
+            System.out.println("Its Rock, You WON!");
+        }
+        else if(computer_choice == 3 && user_choice == 2){
+            System.out.println("Its Scissor, You LOSE!");
+        }
+        else{
+            System.out.println("Sorry, Your choice was Wrong!");
+        }
+    }
+}
