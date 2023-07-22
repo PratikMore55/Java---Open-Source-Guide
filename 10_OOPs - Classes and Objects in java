@@ -1,0 +1,34 @@
+class Employee{
+    int id;
+    float salary;
+    String name;
+    public void printDetails(){
+        System.out.println("My id is : "+id);
+        System.out.println("and my name is :" +name);
+        System.out.println("and my salary is : " + salary);
+    }
+}
+public class OOP {
+    public static void main(String[] args) {
+
+        System.out.println("First Class");
+        Employee pm = new Employee();  // instantiating a new Employee Object
+        Employee gg = new Employee();
+
+        // Setting Attributes
+
+        pm.id = 38;
+        pm.name = "PM";
+        pm.salary = 3788.5f;
+        gg.id = 5;
+        gg.name = "GG";
+        gg.salary = 5555.5f;
+
+        // Printing The Attributes
+
+        pm.printDetails();
+        gg.printDetails();
+//        System.out.println(pm.id);
+//        System.out.println(pm.name);
+    }
+}
