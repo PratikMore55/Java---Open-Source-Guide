@@ -1,0 +1,176 @@
+// threads
+
+package com.company;
+
+class MyThread extends Thread {
+    public void run(){
+        int i = 0;
+        while (i<2000) {
+            System.out.println("hello");
+            System.out.println("World");
+            i++;
+        }
+    }
+}
+class MyThread2 extends Thread{
+    public void run(){
+        int i = 0;
+        while (i<2000) {
+            System.out.println("Thread 2");
+            System.out.println("New thread");
+            i++;
+        }
+    }
+}
+public class Threads {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread2 t2 = new MyThread2();
+        t1.start();
+        t2.start();
+    }
+}
+
+
+// Runnable threads
+
+
+package com.company;
+
+class MyThreadRunnable implements Runnable{
+    public void run(){
+        System.out.println("Running thread");
+    }
+
+}
+class MyThreadRunnable2 implements Runnable{
+    public void run(){
+        System.out.println("Running thread 2");
+    }
+
+}
+public class Runnable_threads {
+    public static void main(String[] args) {
+        MyThreadRunnable mth = new MyThreadRunnable();
+        Thread pm = new Thread(mth);
+
+        MyThreadRunnable2 mth2 = new MyThreadRunnable2();
+        Thread gg = new Thread(mth2);
+        
+        pm.start();
+        gg.start();
+    }
+}
+
+
+//Thread constructor
+
+
+package com.company;
+
+class MyThr extends Thread{
+    public MyThr(String name){
+        super(name);
+    }
+    public void run(){
+        int i = 30;
+        System.out.println("Thank you");
+//        while (true){
+//            System.out.println("I am a thread");
+//        }
+    }
+}
+public class Thread_constructor {
+    public static void main(String[] args) {
+        MyThr mt = new MyThr("PM");
+        MyThr tm = new MyThr("GG");
+        mt.start();
+        System.out.println("The id of the thread is "+ mt.getId());
+        System.out.println("The name of the thread is "+ mt.getName());
+        System.out.println("The id of the thread is "+ tm.getId());
+        System.out.println("The name of the thread is "+ tm.getName());
+    }
+}
+
+
+//Thread priorities
+
+
+package com.company;
+
+class MyThr1 extends Thread{
+    public MyThr1(String name){
+        super(name);
+    }
+    public void run(){
+        int i = 30;
+        System.out.println("Thank you "+this.getName());
+        while (true){
+//            System.out.println("I am a thread");
+            System.out.println("Thank you "+this.getName());
+        }
+    }
+}
+public class Thread_priorities {
+    public static void main(String[] args) {
+        MyThr1 mt = new MyThr1("PM");
+        MyThr1 tm = new MyThr1("GG");
+        MyThr1 gm = new MyThr1("GM");
+        MyThr1 nw = new MyThr1("TM");
+        nw.setPriority(Thread.MAX_PRIORITY);
+        mt.setPriority(Thread.MIN_PRIORITY);
+        tm.setPriority(Thread.MIN_PRIORITY);
+        gm.setPriority(Thread.MIN_PRIORITY);
+        mt.start();
+        tm.start();
+        gm.start();
+        nw.start();
+    }
+}
+
+
+//Thread methods
+
+
+package com.company;
+
+class MyThr2 extends Thread{
+
+    public void run(){
+        int i=0;
+        while (i<3333) {
+
+            System.out.println("Thank you " + this.getName());
+            i++;
+        }
+        while (true){
+//            System.out.println("I am a thread");
+            System.out.println("Thank you "+this.getName());
+        }
+    }
+}
+class MyThr3 extends Thread{
+    public void run(){
+        int i = 30;
+        System.out.println("Thank you "+this.getName());
+        while (true){
+//            System.out.println("I am a thread");
+            System.out.println("Thank you "+this.getName());
+        }
+    }
+}
+public class Thread_methods {
+    public static void main(String[] args) {
+        MyThr2 t1 = new MyThr2();
+        MyThr3 t2 = new MyThr3();
+        t1.start();
+        try {
+            t1.join();
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        t2.start();
+    }
+}
+
