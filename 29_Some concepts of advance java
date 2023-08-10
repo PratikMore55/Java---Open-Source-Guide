@@ -1,0 +1,200 @@
+// Array List
+
+package com.company;
+import java.util.*;
+public class arraylist {
+    public static void main(String[] args) {
+        ArrayList<Integer> l1 = new ArrayList<>();
+        ArrayList<Integer>l2 = new ArrayList<>(5);
+        l2.add(27);
+        l2.add(0,26);
+        l2.add(57);
+        l2.add(17);
+        l2.add(97);
+        l1.add(3);
+        l1.add(5);
+        l1.add(7);
+        l1.add(1);
+        l1.add(0,3);
+        l1.add(0,2);
+        l1.addAll(0,l2);
+        System.out.println(l1.contains(5));
+
+        System.out.println(l1.indexOf(17));
+        System.out.println(l1.indexOf(333));      // Gives -1 as output
+        System.out.println(l1.indexOf(3));
+        System.out.println(l1.lastIndexOf(3));
+//        System.out.println(l1.remove(3));
+        l1.set(1,99);
+        System.out.println(l1.isEmpty());
+        System.out.println(l1.iterator());
+//        l1.clear();
+//
+        for (int i=0; i<l1.size(); i++){
+            System.out.print(l1.get(i));
+            System.out.print(", ");
+        }
+    }
+}
+
+
+                                                   // Linked List
+
+
+package com.company;
+
+import java.util.ArrayList;
+import java.util.*;
+
+public class linkedlist {
+    public static void main(String[] args) {
+        LinkedList<Integer> l1 = new LinkedList<>();
+        LinkedList<Integer>l2 = new LinkedList<>();
+        l2.add(27);
+        l2.add(0,26);
+        l2.add(57);
+        l2.add(17);
+        l2.add(97);
+        l1.add(3);
+        l1.add(5);
+        l1.add(7);
+        l1.add(1);
+        l1.add(0,3);
+        l1.add(0,2);
+        l1.addAll(0,l2);
+        l1.addLast(55);
+        l1.addFirst(85);
+        System.out.println(l1.contains(5));
+
+        System.out.println(l1.indexOf(17));
+        System.out.println(l1.indexOf(333));      // Gives -1 as output
+        System.out.println(l1.indexOf(3));
+        System.out.println(l1.lastIndexOf(3));
+//        System.out.println(l1.remove(3));
+        l1.set(1,99);
+        System.out.println(l1.isEmpty());
+        System.out.println(l1.iterator());
+//        l1.clear();
+//
+        for (int i=0; i<l1.size(); i++){
+            System.out.print(l1.get(i));
+            System.out.print(", ");
+        }
+    }
+}
+
+
+                                                       // Array Dequeue
+
+
+
+package com.company;
+
+import java.util.ArrayDeque;
+
+public class arraydeque {
+    public static void main(String[] args) {
+        ArrayDeque<Integer> ad1 = new ArrayDeque<>();
+        ad1.add(3);
+        ad1.add(37);
+        ad1.add(22);
+        ad1.addFirst(59);
+        ad1.offerFirst(29);
+        ad1.pollLast();
+        ad1.pollFirst();
+        ad1.peekFirst();
+        ad1.peekLast();
+        System.out.println(ad1.getFirst());
+        System.out.println(ad1.getLast());
+        System.out.println(ad1.contains(37));
+        System.out.println(ad1.contains(3));
+    }
+}
+
+
+
+                                                          // Hashset
+
+
+
+package com.company;
+
+import java.util.HashSet;
+
+public class set {
+    public static void main(String[] args) {
+        HashSet<Integer> myHashSet = new HashSet<>(88,2.8f);
+        myHashSet.add(4);
+        myHashSet.add(4);
+        myHashSet.clear();
+        myHashSet.add(55);
+        myHashSet.add(12);
+        myHashSet.add(2);
+//        myHashSet.clear();
+        System.out.println(myHashSet);
+    }
+}
+
+
+                                                            // Date and Time in java
+
+
+
+package com.company;
+
+import java.util.Date;
+import java.util.SortedMap;
+
+public class date {
+    public static void main(String[] args) {
+        System.out.println(System.currentTimeMillis()/1000/3600/24/365);   // Shows total years passed after 1970
+//        System.out.println(Long.MAX_VALUE);
+//        System.out.println(System.currentTimeMillis());
+
+        Date d = new Date();
+        System.out.println(d);       // Shows current date, time and year
+        System.out.println("Today's date and time is: "+d);
+        System.out.println(d.getTime());
+        System.out.println(d.getDate());
+        System.out.println(d.getMonth());
+        System.out.println(d.getYear());
+    }
+}
+
+
+                                                                 // Calender
+
+
+
+package com.company;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class calender {
+    public static void main(String[] args) {
+        Calendar c = Calendar.getInstance();
+        System.out.println(c.getCalendarType());
+        System.out.println(c.getTimeZone());
+        System.out.println(c.getWeeksInWeekYear());
+        GregorianCalendar cal = new GregorianCalendar();
+        System.out.println(cal.isLeapYear(2032));
+
+
+        LocalDate ld = LocalDate.now();
+//        System.out.println(ld);
+//
+//
+//        LocalTime lt = LocalTime.now();
+//        System.out.println(lt);
+
+        LocalDateTime ldt = LocalDateTime.now();
+        System.out.println(ldt);
+    }
+}
+
+
+                                                                                    
