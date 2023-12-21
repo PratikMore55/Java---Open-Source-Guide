@@ -1,0 +1,181 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Switch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+                        // Practice Question
+
+//        System.out.println("Enter emp ID: ");
+//        int empID = sc.nextInt();
+//        System.out.println("Enter emp name: ");
+////        String name = sc.next();
+//        String name = sc.next();
+//
+//        switch (empID) {
+//            case 1 -> System.out.println("1");
+//            case 2 -> System.out.println("2");
+//            case 3 -> System.out.println("3");
+//            default -> System.out.println("Enter valid ID");
+//        }
+//        switch (name) {
+//            case ("PM") -> System.out.println("Pratik More");
+//            case ("GG") -> System.out.println("GG");
+//            default -> System.out.println("Enter valid name");
+//        }
+
+                         // Weekday
+
+//        System.out.println("Enter a weekday number: ");
+//        int num = sc.nextInt();
+//
+//        switch (num) {
+//            case (1) -> System.out.println("MONDAY");
+//            case (2) -> System.out.println("TUESDAY");
+//            case (3) -> System.out.println("WEDNESDAY");
+//            case (4) -> System.out.println("THURSDAY");
+//            case (5) -> System.out.println("FRIDAY");
+//            case (6) -> System.out.println("SATURDAY");
+//            case (7) -> System.out.println("SUNDAY");
+//            default -> System.out.println("Enter valid weekday!!");
+//        }
+
+                           // Gender Identifier
+
+//        System.out.println("Enter Gender: ");
+//        String gender = sc.next();
+//
+//        switch (gender) {
+//            case ("M") -> System.out.println("MALE");
+//            case ("F") -> System.out.println("FEMALE");
+//            default -> System.out.println("We only have 2 genders");
+//        }
+
+                          // Vowel or Consonant
+
+//        System.out.println("Enter char: ");
+//        char ch = sc.next().charAt(0);
+//
+//        switch (ch) {
+//            case ('A'), ('E'), ('I'), ('O'), ('U') -> System.out.println("Vowel");
+//            default -> System.out.println("consonant");
+//        }
+
+                      // Odd and Even
+
+//        System.out.println("Enter a number: ");
+//        int num = sc.nextInt();
+//
+//        switch (num % 2) {
+//            case 0 -> System.out.println("Even Number");
+//            case 1 -> System.out.println("Odd Number");
+//        }
+
+//        System.out.println("Enter month: ");
+//        String month = sc.next();
+//
+//        switch (month) {
+//            case ("Jan"), ("Mar"), ("May"), ("July"), ("Aug"), ("Oct"), ("Dec") ->
+//                    System.out.println("It has 31 days...");
+//            case ("Feb") -> System.out.println("It has 28 days...");
+//            case ("Apr"), ("Jun"), ("Sept"), ("Nov") -> System.out.println("It has 30 days...");
+//            default -> System.out.println("Please enter valid month...");
+//        }
+
+                           // Grading System
+
+//        System.out.println("Enter Grade: ");
+//        String grade = sc.next();
+//
+//        switch (grade) {
+//            case ("A") -> System.out.println("Obtained 90+ marks");
+//            case ("B") -> System.out.println("Obtained 75+ marks");
+//            case ("C") -> System.out.println("Obtained 50+ marks");
+//            case ("D") -> System.out.println("Obtained 35+ marks");
+//            case ("F") -> System.out.println("Failed");
+//            default -> System.out.println("Enter valid Grade...");
+//        }
+
+                                       // Menu driven program - Calculator
+
+//        System.out.println("1-Addition");
+//        System.out.println("1-Subtraction");
+//        System.out.println("1-Multiplication");
+//        System.out.println("1-Division");
+//        System.out.println("Enter choice: ");
+//
+//        int ch = sc.nextInt();
+//
+//        switch (ch) {
+//            case (1):
+//                System.out.println("Enter number 1: ");
+//                int A = sc.nextInt();
+//                System.out.println("Enter number 2: ");
+//                int B = sc.nextInt();
+//                int C = A + B;
+//                System.out.println("Addition = " +C);
+//                break;
+//
+//            case (2):
+//                System.out.println("Enter number 1: ");
+//                A = sc.nextInt();
+//                System.out.println("Enter number 2: ");
+//                 B = sc.nextInt();
+//                 C = A - B;
+//                System.out.println("Subtraction = " +C);
+//                break;
+//
+//            case (3):
+//                System.out.println("Enter number 1: ");
+//                 A = sc.nextInt();
+//                System.out.println("Enter number 2: ");
+//                 B = sc.nextInt();
+//                 C = A * B;
+//                System.out.println("Multiplication = " +C);
+//                break;
+//
+//            case (4):
+//                System.out.println("Enter number 1: ");
+//                 A = sc.nextInt();
+//                System.out.println("Enter number 2: ");
+//                 B = sc.nextInt();
+//                 C = A / B;
+//                System.out.println("Division = " +C);
+//                break;
+//
+//            default:
+//                System.out.println("Enter valid input...");
+//        }
+
+                             // Voting eligibility
+
+//        System.out.println("Enter your age: ");
+//        int age = sc.nextInt();
+//
+//        int res = age >= 18? 1:0;
+//
+//        switch (res) {
+//            case (0) -> System.out.println("Not eligible");
+//            case (1) -> System.out.println("Eligible");
+//            default -> System.out.println("Enter valid input...");
+//        }
+
+                             // Max of 2 numbers
+
+        System.out.println("Enter number  1: ");
+        int A = sc.nextInt();
+        System.out.println("Enter number 2: ");
+        int B = sc.nextInt();
+
+
+        int C = A > B? 0:1;
+
+        switch (C) {
+            case (0) -> System.out.println("Number 1 is bigger");
+            case (1) -> System.out.println("Number 2 is bigger");
+            default -> System.out.println("Enter valid input...");
+        }
+    }
+}
